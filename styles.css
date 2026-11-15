@@ -136,3 +136,21 @@ footer{border-color:var(--line)}
  .footer-inner{min-height:105px}
 }
 @media(max-width:375px){.container{width:calc(100% - 30px)}}
+
+/* ARCHITECTURAL SIGNATURE — recessed lettering with concealed LED edge */
+@import url('https://fonts.googleapis.com/css2?family=Michroma&family=Manrope:wght@400;500;600;700;800&display=swap');
+.brand-monogram{display:inline-flex;align-items:center;gap:1px;font-family:"Michroma",sans-serif;font-size:19px;font-weight:400;letter-spacing:-.11em;color:#eef4ff;text-shadow:0 0 10px rgba(133,174,255,.2)}
+.brand-monogram span:last-child{color:#a8c5ff;text-shadow:0 0 8px rgba(139,180,255,.48)}
+.architectural-name{font-family:"Manrope",sans-serif;font-weight:600;letter-spacing:-.085em;line-height:.98}
+.architectural-name .name-line{display:block;width:max-content;max-width:100%;color:transparent;-webkit-text-fill-color:transparent;-webkit-text-stroke:1.35px rgba(198,218,255,.88);text-shadow:0 0 1px rgba(190,215,255,.6),0 0 7px rgba(115,159,255,.34),0 0 22px rgba(81,130,232,.18);filter:drop-shadow(0 0 9px rgba(105,151,244,.14));transition:filter .6s ease,text-shadow .6s ease}
+.architectural-name .name-line+ .name-line{margin-top:.045em}
+.architectural-name .name-line:hover{filter:drop-shadow(0 0 13px rgba(130,174,255,.35));text-shadow:0 0 2px rgba(218,232,255,.8),0 0 11px rgba(115,159,255,.48),0 0 30px rgba(81,130,232,.25)}
+/* Scroll reveals: restrained upward movement, soft fade and stagger */
+.js .reveal{transition:opacity .95s cubic-bezier(.2,.7,.2,1),transform .95s cubic-bezier(.2,.7,.2,1);transition-delay:var(--reveal-delay,0ms)}
+.js .reveal.is-visible{transition-delay:var(--reveal-delay,0ms)}
+@media(max-width:640px){
+ .architectural-name{font-size:clamp(2.85rem,11.8vw,4.7rem);letter-spacing:-.075em}
+ .architectural-name .name-line{-webkit-text-stroke:1.05px rgba(198,218,255,.9);text-shadow:0 0 1px rgba(190,215,255,.55),0 0 6px rgba(115,159,255,.3),0 0 16px rgba(81,130,232,.15)}
+ .brand-monogram{font-size:17px}
+}
+@media(prefers-reduced-motion:reduce){.js .reveal{transition:none!important}}
