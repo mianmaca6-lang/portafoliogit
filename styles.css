@@ -263,3 +263,66 @@ footer{border-color:var(--line)}
 .skill h3{color:#dce6f7}
 .skill p{color:#aab6c9}
 .skill:hover{background:linear-gradient(135deg,rgba(43,61,91,.42),rgba(19,28,43,.26) 75%);border-color:rgba(151,184,246,.3);transform:translateY(-3px)}
+
+/* HERO NAME — liquid architectural glass with light contained in the letterforms.
+   No exterior neon halo or drop-shadow: the highlights live on the glass face
+   and the fine inner edge of each glyph. */
+.hero-title.architectural-name{
+ display:block;
+ isolation:isolate;
+ font-family:"Manrope",sans-serif;
+ font-weight:700;
+ letter-spacing:-.082em;
+ line-height:.99;
+}
+.hero-title.architectural-name .name-line{
+ display:block;
+ width:max-content;
+ max-width:100%;
+ position:relative;
+ color:transparent;
+ -webkit-text-fill-color:transparent;
+ -webkit-background-clip:text;
+ background-clip:text;
+ -webkit-text-stroke:.65px rgba(220,235,255,.48);
+ text-shadow:
+   0 .7px 0 rgba(255,255,255,.15),
+   0 -1px 0 rgba(4,10,20,.42);
+ filter:none;
+ transition:background-position .7s ease,-webkit-text-stroke .7s ease;
+ background-size:100% 180%;
+ background-position:50% 42%;
+}
+.hero-title.architectural-name .given-name{
+ background-image:
+   linear-gradient(180deg,
+     #ffffff 0%,
+     #e8f0ff 17%,
+     #b8cbe9 39%,
+     #f5f8ff 51%,
+     #9eafca 70%,
+     #dce7f8 100%);
+}
+.hero-title.architectural-name .family-name{
+ background-image:
+   linear-gradient(180deg,
+     #dce8fb 0%,
+     #aabbd7 20%,
+     #7185a5 43%,
+     #d6e2f6 53%,
+     #7d91b2 73%,
+     #b9c9e2 100%);
+ -webkit-text-stroke:.65px rgba(196,218,250,.42);
+}
+.hero-title.architectural-name .name-line:hover{
+ background-position:50% 58%;
+ -webkit-text-stroke-color:rgba(235,245,255,.62);
+ text-shadow:0 .7px 0 rgba(255,255,255,.19),0 -1px 0 rgba(4,10,20,.48);
+}
+@media(max-width:640px){
+ .hero-title.architectural-name{letter-spacing:-.075em;line-height:1.02}
+ .hero-title.architectural-name .name-line{-webkit-text-stroke:.5px rgba(220,235,255,.42)}
+}
+@media(prefers-reduced-motion:reduce){
+ .hero-title.architectural-name .name-line{transition:none}
+}
