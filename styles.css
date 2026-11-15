@@ -200,3 +200,41 @@ footer{border-color:var(--line)}
 .js .reveal{opacity:0;transform:translate3d(0,30px,0);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);will-change:opacity,transform}
 .js .reveal.is-visible{opacity:1;transform:translate3d(0,0,0)}
 @media(prefers-reduced-motion:reduce){.js .reveal,.js .reveal.is-visible{opacity:1;transform:none;transition:none;will-change:auto}}
+
+/* Refined architectural lettering: a recessed face with a very restrained
+   concealed edge light. Given name and family name keep separate tones. */
+.architectural-name{font-family:"Manrope",sans-serif;font-weight:650;letter-spacing:-.078em;line-height:1.02}
+.architectural-name .name-line{
+ display:block;width:max-content;max-width:100%;
+ -webkit-text-fill-color:currentColor;
+ -webkit-text-stroke:.55px rgba(235,242,255,.24);
+ text-shadow:
+   0 1px 0 rgba(255,255,255,.13),
+   0 2px 0 rgba(2,5,10,.72),
+   0 5px 8px rgba(0,0,0,.34),
+   0 0 7px rgba(151,184,246,.075);
+ filter:drop-shadow(0 3px 5px rgba(0,0,0,.2));
+ transition:color .35s ease,text-shadow .35s ease,filter .35s ease;
+}
+.architectural-name .given-name{color:#edf1f8}
+.architectural-name .family-name{color:#8998b0;-webkit-text-stroke:.55px rgba(198,216,248,.2)}
+.architectural-name .name-line:hover{
+ text-shadow:0 1px 0 rgba(255,255,255,.17),0 2px 0 rgba(2,5,10,.72),0 5px 8px rgba(0,0,0,.34),0 0 10px rgba(151,184,246,.13);
+ filter:drop-shadow(0 3px 6px rgba(0,0,0,.23));
+}
+@media(max-width:640px){
+ .architectural-name{font-size:clamp(2.45rem,10.5vw,4.3rem);letter-spacing:-.07em}
+ .architectural-name .name-line{-webkit-text-stroke:.45px rgba(235,242,255,.22)}
+}
+/* Smooth, stable bidirectional reveal. A slightly inset observer zone avoids
+   rapid toggling at the exact viewport edge while scrolling back and forth. */
+.js .reveal{
+ opacity:0;
+ transform:translate3d(0,18px,0);
+ transition:opacity .68s cubic-bezier(.22,.61,.36,1),transform .68s cubic-bezier(.22,.61,.36,1);
+ will-change:opacity,transform;
+}
+.js .reveal.is-visible{opacity:1;transform:translate3d(0,0,0)}
+@media(prefers-reduced-motion:reduce){
+ .js .reveal,.js .reveal.is-visible{opacity:1;transform:none;transition:none;will-change:auto}
+}
