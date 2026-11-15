@@ -167,3 +167,36 @@ footer{border-color:var(--line)}
 .tmc-link>span:first-child{font-size:13px;font-weight:600}.tmc-link>span:nth-child(2){color:var(--accent);font-size:20px}
 .tmc-link small{grid-column:1/-1;color:var(--subtle);font-size:9px;letter-spacing:.15em}
 @media(max-width:640px){.tmc-section{padding:65px 0}.tmc-inner{grid-template-columns:1fr;gap:28px}.tmc-link{width:100%}}
+
+/* COVE-UPLIGHT LETTERING: dark recessed faces, fine illuminated inner rims,
+   and a concealed warm-white wash rising from the lower edge. */
+.architectural-name{font-family:"Michroma","Manrope",sans-serif;font-weight:400;letter-spacing:-.075em;line-height:1.08}
+.architectural-name .name-line{
+ color:rgba(7,11,18,.96);
+ -webkit-text-fill-color:rgba(7,11,18,.96);
+ -webkit-text-stroke:1.25px rgba(198,219,255,.82);
+ text-shadow:
+   0 1px 0 rgba(238,246,255,.22),
+   0 3px 0 rgba(3,6,12,.92),
+   0 7px 12px rgba(0,0,0,.78),
+   0 11px 17px rgba(255,220,174,.16),
+   0 18px 34px rgba(126,170,255,.23);
+ filter:drop-shadow(0 7px 10px rgba(255,221,180,.13)) drop-shadow(0 15px 28px rgba(91,145,255,.16));
+ transition:filter .8s ease,text-shadow .8s ease;
+}
+.architectural-name .name-line:hover{
+ filter:drop-shadow(0 8px 12px rgba(255,225,190,.22)) drop-shadow(0 18px 36px rgba(117,165,255,.25));
+}
+.brand-monogram{gap:4px;letter-spacing:-.12em;font-size:20px}
+.brand-monogram span{display:inline-block}
+.brand-monogram span:last-child{color:#d9e6ff;text-shadow:0 0 5px rgba(190,215,255,.55),0 0 14px rgba(139,180,255,.6)}
+@media(max-width:640px){
+ .architectural-name{font-size:clamp(2.45rem,10.5vw,4.3rem);letter-spacing:-.07em}
+ .architectural-name .name-line{-webkit-text-stroke:1px rgba(198,219,255,.84)}
+ .brand-monogram{font-size:18px;gap:3px}
+}
+/* Reveal in both directions: elements fade/settle in on entry and fade/lift
+   away again when they leave the viewport, whether scrolling down or up. */
+.js .reveal{opacity:0;transform:translate3d(0,30px,0);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);will-change:opacity,transform}
+.js .reveal.is-visible{opacity:1;transform:translate3d(0,0,0)}
+@media(prefers-reduced-motion:reduce){.js .reveal,.js .reveal.is-visible{opacity:1;transform:none;transition:none;will-change:auto}}
