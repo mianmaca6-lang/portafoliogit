@@ -438,3 +438,44 @@ footer{border-color:var(--line)}
 @media(max-width:640px){
  .hero-title.architectural-name .name-line{letter-spacing:.008em!important}
 }
+
+
+/* FINAL NAME PASS — liquid architectural glass, with the light contained
+   inside the letterforms. Given name and surnames use separate glass tones. */
+.hero-title.architectural-name{
+  font-family:"Manrope",sans-serif!important;
+  font-weight:650!important;
+  letter-spacing:-.065em!important;
+  line-height:1.02!important;
+}
+.hero-title.architectural-name .name-line{
+  display:block!important;
+  width:max-content!important;
+  max-width:100%!important;
+  letter-spacing:.026em!important;
+  -webkit-background-clip:text!important;
+  background-clip:text!important;
+  -webkit-text-fill-color:transparent!important;
+  -webkit-text-stroke:.45px rgba(231,241,255,.5)!important;
+  text-shadow:
+    0 .8px 0 rgba(255,255,255,.34),
+    0 -1px 0 rgba(9,16,28,.62),
+    0 1.5px 0 rgba(7,12,21,.58)!important;
+  filter:none!important;
+  background-size:100% 100%!important;
+}
+.hero-title.architectural-name .given-name{
+  background-image:linear-gradient(180deg,
+    #ffffff 0%,#eaf1fc 16%,#b9c9df 34%,
+    #f9fcff 47%,#d9e5f4 54%,#9eafc8 76%,#e8f0fb 100%)!important;
+}
+.hero-title.architectural-name .family-name{
+  background-image:linear-gradient(180deg,
+    #dce7f7 0%,#b4c4dc 17%,#7f93b2 35%,
+    #e4edf9 48%,#b4c5df 55%,#7186a6 77%,#c5d3e8 100%)!important;
+  -webkit-text-stroke:.45px rgba(202,220,246,.44)!important;
+}
+@media(max-width:640px){
+  .hero-title.architectural-name{letter-spacing:-.07em!important}
+  .hero-title.architectural-name .name-line{letter-spacing:.012em!important}
+}
