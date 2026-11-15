@@ -326,3 +326,77 @@ footer{border-color:var(--line)}
 @media(prefers-reduced-motion:reduce){
  .hero-title.architectural-name .name-line{transition:none}
 }
+
+/* FINAL VISUAL OVERRIDE — cache-busted release 2026-11-15.
+   Solid glass lettering: visible face, restrained bevel, no outer glow. */
+.hero-title.architectural-name .name-line{
+ display:block!important;
+ color:#edf3fc!important;
+ -webkit-text-fill-color:#edf3fc!important;
+ background:none!important;
+ -webkit-background-clip:border-box!important;
+ background-clip:border-box!important;
+ -webkit-text-stroke:.35px rgba(255,255,255,.34)!important;
+ text-shadow:
+   0 1px 0 rgba(255,255,255,.38),
+   0 -1px 0 rgba(18,28,45,.88),
+   0 2px 0 rgba(4,8,15,.72)!important;
+ filter:none!important;
+}
+.hero-title.architectural-name .given-name{
+ color:#f2f5fb!important;-webkit-text-fill-color:#f2f5fb!important;
+}
+.hero-title.architectural-name .family-name{
+ color:#9eafc9!important;-webkit-text-fill-color:#9eafc9!important;
+ -webkit-text-stroke:.35px rgba(205,222,249,.3)!important;
+}
+.hero-title.architectural-name .name-line:hover{
+ filter:none!important;
+ text-shadow:0 1px 0 rgba(255,255,255,.42),0 -1px 0 rgba(18,28,45,.88),0 2px 0 rgba(4,8,15,.72)!important;
+}
+/* Make the three capability symbols actually occupy visible space. */
+.cap-card .cap-icon{
+ display:flex!important;align-items:center!important;justify-content:flex-start!important;
+ width:52px!important;height:52px!important;margin:0 0 24px!important;
+ color:#9ebcff!important;opacity:1!important;visibility:visible!important;
+}
+.cap-card .cap-icon svg{
+ display:block!important;width:44px!important;height:44px!important;
+ stroke:#9ebcff!important;stroke-width:1.45!important;fill:none!important;
+ opacity:1!important;filter:none!important;
+}
+/* More readable, clearly differentiated skill panels. */
+#skills .skills{gap:14px!important}
+#skills .skill{
+ min-height:126px!important;padding:27px 28px!important;
+ background:linear-gradient(135deg,#172235 0%,#111a29 100%)!important;
+ border:1px solid rgba(137,169,220,.25)!important;
+ box-shadow:inset 0 1px 0 rgba(230,240,255,.06)!important;
+}
+#skills .skill:nth-child(2){background:linear-gradient(135deg,#192337,#121b29)!important}
+#skills .skill:nth-child(3){background:linear-gradient(135deg,#1b2639,#121b29)!important}
+#skills .skill:nth-child(4){background:linear-gradient(135deg,#18263a,#111a29)!important}
+#skills .skill h3{color:#edf3ff!important}
+#skills .skill p{color:#b8c5d9!important}
+#skills .skill:before{
+ content:""!important;position:absolute!important;left:0!important;top:0!important;
+ width:100%!important;height:2px!important;
+ background:linear-gradient(90deg,#8eaff0,rgba(142,175,240,.12) 70%,transparent)!important;
+ opacity:.75!important;
+}
+#skills .skill:hover{border-color:rgba(157,190,246,.48)!important;transform:translateY(-2px)!important}
+/* Contact/final section receives its own calm blue-black surface. */
+#contact{
+ background:radial-gradient(ellipse at 50% 0%,rgba(49,72,111,.24),transparent 58%),#090d14!important;
+ border-top:1px solid rgba(145,174,222,.16)!important;
+}
+#contact .contact-inner{padding-top:110px!important;padding-bottom:110px!important}
+#contact h2{color:#f0f4fb!important}
+#contact h2 span{color:#91a5c5!important}
+#contact .contact-copy{color:#b2bfd2!important}
+#contact .section-index,#contact .overline{color:#9bb9f2!important}
+@media(max-width:640px){
+ #skills .skill{padding:22px!important;min-height:0!important}
+ .cap-card .cap-icon{margin-bottom:18px!important}
+ #contact .contact-inner{padding-top:76px!important;padding-bottom:76px!important}
+}
