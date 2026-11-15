@@ -170,7 +170,7 @@ footer{border-color:var(--line)}
 
 /* COVE-UPLIGHT LETTERING: dark recessed faces, fine illuminated inner rims,
    and a concealed warm-white wash rising from the lower edge. */
-.architectural-name{font-family:"Michroma","Manrope",sans-serif;font-weight:400;letter-spacing:-.075em;line-height:1.08}
+.architectural-name{font-family:"Manrope",sans-serif;font-weight:600;letter-spacing:-.075em;line-height:1.08}
 .architectural-name .name-line{
  color:rgba(7,11,18,.96);
  -webkit-text-fill-color:rgba(7,11,18,.96);
