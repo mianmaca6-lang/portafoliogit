@@ -365,6 +365,5 @@ footer{border-top:1px solid var(--line);background:#080b11}
 @media(max-width:380px){
   .container{width:calc(100% - 30px)}
   .hero-title.architectural-name{font-size:2.42rem}
-  .hero-title.architectural-name .name-line{letter-spacing:0}
   .hero-actions{flex-direction:column;align-items:stretch;max-width:230px}
 }
