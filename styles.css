@@ -67,17 +67,9 @@ button{font:inherit}
   min-height:100svh;position:relative;overflow:hidden;
   display:flex;align-items:center;padding:150px 0 100px;
   background:
-    radial-gradient(ellipse at 45% 48%,rgba(34,64,115,.26),transparent 58%),
-    radial-gradient(ellipse at 86% 42%,rgba(38,66,116,.18),transparent 42%),
+    radial-gradient(ellipse at 42% 46%,rgba(30,58,104,.24),transparent 58%),
+    radial-gradient(ellipse at 86% 42%,rgba(38,66,116,.16),transparent 42%),
     #080b11;
-}
-.hero-grid{
-  position:absolute;inset:0;opacity:.12;
-  background-image:
-    linear-gradient(rgba(151,175,218,.12) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(151,175,218,.12) 1px,transparent 1px);
-  background-size:80px 80px;
-  mask-image:linear-gradient(to bottom,#000,transparent 92%);
 }
 .glow{
   position:absolute;width:580px;height:580px;right:-190px;top:7%;
@@ -98,7 +90,7 @@ button{font:inherit}
 }
 .kicker{color:var(--accent);margin:0 0 23px}
 
-/* NAME — SVG glass lettering. */
+/* NAME — Liquid Glass SVG lettering */
 .hero-title.architectural-name{
   display:block;
   width:100%;
