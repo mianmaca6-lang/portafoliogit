@@ -154,3 +154,16 @@ footer{border-color:var(--line)}
  .brand-monogram{font-size:17px}
 }
 @media(prefers-reduced-motion:reduce){.js .reveal{transition:none!important}}
+
+/* T-MC founder feature */
+.tmc-section{padding:75px 0;background:linear-gradient(110deg,#0d121c,#0a0d14);border-block:1px solid var(--line)}
+.tmc-inner{display:grid;grid-template-columns:1fr auto;align-items:center;gap:45px}
+.tmc-kicker{font-size:10px;letter-spacing:.22em;color:#d5e2fb;margin:25px 0 7px;font-weight:700}
+.tmc-title{font:600 clamp(3rem,6vw,5rem)/.95 "Michroma",var(--display);letter-spacing:-.09em;margin:0;color:#edf3ff;text-shadow:0 0 14px rgba(139,180,255,.2)}
+.tmc-title span{color:var(--accent)}
+.tmc-copy{max-width:560px;color:var(--muted);font-size:14px;line-height:1.85;margin:18px 0 0}
+.tmc-link{min-width:210px;display:grid;grid-template-columns:1fr auto;gap:12px 20px;align-items:center;padding:20px 22px;border:1px solid rgba(190,205,230,.17);border-radius:14px;background:rgba(255,255,255,.025);transition:.3s}
+.tmc-link:hover{border-color:rgba(139,180,255,.55);background:rgba(139,180,255,.06);transform:translateY(-3px)}
+.tmc-link>span:first-child{font-size:13px;font-weight:600}.tmc-link>span:nth-child(2){color:var(--accent);font-size:20px}
+.tmc-link small{grid-column:1/-1;color:var(--subtle);font-size:9px;letter-spacing:.15em}
+@media(max-width:640px){.tmc-section{padding:65px 0}.tmc-inner{grid-template-columns:1fr;gap:28px}.tmc-link{width:100%}}
