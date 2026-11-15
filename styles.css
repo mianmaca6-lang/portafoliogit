@@ -400,3 +400,27 @@ footer{border-color:var(--line)}
  .cap-card .cap-icon{margin-bottom:18px!important}
  #contact .contact-inner{padding-top:76px!important;padding-bottom:76px!important}
 }
+
+/* Glass face refinement: the illumination is clipped to the glyphs,
+   never cast as a halo around the outside. */
+.hero-title.architectural-name .name-line{
+ color:transparent!important;
+ -webkit-text-fill-color:transparent!important;
+ background-clip:text!important;
+ -webkit-background-clip:text!important;
+ -webkit-text-stroke:.35px rgba(235,244,255,.38)!important;
+ text-shadow:0 .7px 0 rgba(255,255,255,.2),0 -1px 0 rgba(8,14,24,.42)!important;
+ filter:none!important;
+ background-size:100% 100%!important;
+}
+.hero-title.architectural-name .given-name{
+ background-image:linear-gradient(180deg,#fbfdff 0%,#dbe6f6 18%,#9aacc8 39%,#f3f7ff 49%,#c3d3ec 57%,#7f92af 79%,#dce7f7 100%)!important;
+}
+.hero-title.architectural-name .family-name{
+ background-image:linear-gradient(180deg,#e2ebf9 0%,#b4c4dd 18%,#7489a9 39%,#dbe7f8 49%,#a5b9d8 57%,#637997 79%,#c1d1e8 100%)!important;
+ -webkit-text-stroke:.35px rgba(205,224,250,.34)!important;
+}
+.hero-title.architectural-name .name-line:hover{
+ filter:none!important;
+ text-shadow:0 .7px 0 rgba(255,255,255,.22),0 -1px 0 rgba(8,14,24,.42)!important;
+}
