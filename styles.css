@@ -238,3 +238,11 @@ footer{border-color:var(--line)}
 @media(prefers-reduced-motion:reduce){
  .js .reveal,.js .reveal.is-visible{opacity:1;transform:none;transition:none;will-change:auto}
 }
+
+/* Minimal capability glyphs: quiet architectural linework */
+.cap-card{position:relative}
+.cap-icon{width:48px;height:48px;margin:0 0 30px;display:grid;place-items:center;color:#9bbcff}
+.cap-icon svg{width:43px;height:43px;stroke:currentColor;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round;opacity:.88;filter:drop-shadow(0 0 7px rgba(135,174,255,.12));transition:transform .45s ease,opacity .45s ease,filter .45s ease}
+.cap-card:hover .cap-icon svg{transform:translateY(-3px);opacity:1;filter:drop-shadow(0 0 10px rgba(135,174,255,.25))}
+.cap-card>span{display:block}
+@media(max-width:640px){.cap-icon{margin-bottom:22px;width:42px;height:42px}.cap-icon svg{width:39px;height:39px}}
