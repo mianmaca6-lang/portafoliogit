@@ -31,7 +31,45 @@
   <div class="container hero-content">
     <p class="eyebrow reveal"><span class="status-dot"></span> OPEN TO COLLABORATION & OPPORTUNITIES</p>
     <p class="kicker reveal">ENGINEERING · ROBOTICS · DATA</p>
-    <h1 class="hero-title architectural-name reveal"><span class="name-line given-name">Miguel Ángel</span><span class="name-line family-name">Martínez Cárdenas</span></h1>
+    <h1 class="hero-title architectural-name reveal">
+      <svg class="name-svg" viewBox="0 0 1180 280" role="img" aria-labelledby="hero-name-title" xmlns="http://www.w3.org/2000/svg">
+        <title id="hero-name-title">Miguel Ángel Martínez Cárdenas</title>
+        <defs>
+          <linearGradient id="name-silver" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#f5f7fb"/>
+            <stop offset=".34" stop-color="#d7dee8"/>
+            <stop offset=".62" stop-color="#e8edf4"/>
+            <stop offset="1" stop-color="#b8c3d1"/>
+          </linearGradient>
+          <linearGradient id="name-steel" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#b9c9de"/>
+            <stop offset=".36" stop-color="#8fa3bf"/>
+            <stop offset=".64" stop-color="#a9bad1"/>
+            <stop offset="1" stop-color="#7186a3"/>
+          </linearGradient>
+          <filter id="name-inner-bevel" x="-1%" y="-1%" width="102%" height="102%" color-interpolation-filters="sRGB">
+            <feMorphology in="SourceAlpha" operator="erode" radius="1.05" result="inside-shape"/>
+            <feComposite in="SourceAlpha" in2="inside-shape" operator="out" result="inner-rim"/>
+            <feGaussianBlur in="inner-rim" stdDeviation=".32" result="soft-rim"/>
+            <feFlood flood-color="#f8fbff" flood-opacity=".23" result="rim-light"/>
+            <feComposite in="rim-light" in2="soft-rim" operator="in" result="contained-highlight"/>
+            <feOffset in="SourceAlpha" dx="0" dy="-1" result="upper-shift"/>
+            <feComposite in="SourceAlpha" in2="upper-shift" operator="out" result="lower-bevel-edge"/>
+            <feFlood flood-color="#07111f" flood-opacity=".2" result="bevel-shadow"/>
+            <feComposite in="bevel-shadow" in2="lower-bevel-edge" operator="in" result="contained-shadow"/>
+            <feMerge>
+              <feMergeNode in="SourceGraphic"/>
+              <feMergeNode in="contained-shadow"/>
+              <feMergeNode in="contained-highlight"/>
+            </feMerge>
+          </filter>
+        </defs>
+        <g font-family="Manrope, Helvetica Neue, Arial, sans-serif" font-size="116" font-weight="550" letter-spacing="2.3" filter="url(#name-inner-bevel)">
+          <text class="name-given" x="3" y="112" fill="url(#name-silver)" stroke="#f8fbff" stroke-opacity=".18" stroke-width=".45" paint-order="stroke">Miguel Ángel</text>
+          <text class="name-family" x="3" y="246" fill="url(#name-steel)" stroke="#dbe8fa" stroke-opacity=".16" stroke-width=".45" paint-order="stroke">Martínez Cárdenas</text>
+        </g>
+      </svg>
+    </h1>
     <h2 class="hero-role reveal">Mechatronics Engineering <b>/</b> Robotics &amp; Data Systems</h2>
     <p class="hero-copy reveal">I turn complex ideas into useful systems, connecting engineering, intelligent automation and data to solve real-world problems.</p>
     <div class="hero-actions reveal"><a class="button primary" href="#projects">Explore projects ↘</a><a class="button ghost" href="#contact">Get in touch ↗</a></div>
