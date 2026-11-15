@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261115-liquidglass">
+  <link rel="stylesheet" href="styles.css?v=20261115-liquidglass-final">
   <script src="https://unpkg.com/lucide@latest"></script>
   <script src="script.js" defer></script>
 </head>
@@ -27,7 +27,7 @@
 </nav></header>
 <main id="main">
 <section class="hero">
-  <div class="hero-grid"></div><div class="glow"></div>
+  <div class="glow"></div>
   <div class="container hero-content">
     <p class="eyebrow reveal"><span class="status-dot"></span> OPEN TO COLLABORATION & OPPORTUNITIES</p>
     <p class="kicker reveal">ENGINEERING · ROBOTICS · DATA</p>
@@ -35,42 +35,43 @@
       <svg class="name-svg" viewBox="0 0 1180 280" role="img" aria-labelledby="hero-name-title" xmlns="http://www.w3.org/2000/svg">
         <title id="hero-name-title">Miguel Ángel Martínez Cárdenas</title>
         <defs>
-          <linearGradient id="glass-body-top" x1="0%" y1="0%" x2="15%" y2="100%">
-            <stop offset="0%" stop-color="#ffffff" stop-opacity="0.24"/>
-            <stop offset="35%" stop-color="#b8ceef" stop-opacity="0.08"/>
-            <stop offset="70%" stop-color="#7ca0d4" stop-opacity="0.04"/>
-            <stop offset="100%" stop-color="#dceaff" stop-opacity="0.18"/>
+          <!-- NOMBRES: Cristal hielo / plata translúcido (50% presencia visual) -->
+          <linearGradient id="liquid-body-given" x1="0%" y1="0%" x2="10%" y2="100%">
+            <stop offset="0%" stop-color="#ffffff" stop-opacity="0.32"/>
+            <stop offset="28%" stop-color="#dce8fc" stop-opacity="0.11"/>
+            <stop offset="68%" stop-color="#9cb5db" stop-opacity="0.06"/>
+            <stop offset="100%" stop-color="#eef5ff" stop-opacity="0.24"/>
           </linearGradient>
 
-          <linearGradient id="glass-body-bottom" x1="0%" y1="0%" x2="15%" y2="100%">
-            <stop offset="0%" stop-color="#e2eeff" stop-opacity="0.17"/>
-            <stop offset="40%" stop-color="#92b2e0" stop-opacity="0.06"/>
-            <stop offset="75%" stop-color="#5d7ca8" stop-opacity="0.03"/>
-            <stop offset="100%" stop-color="#cbe0ff" stop-opacity="0.14"/>
+          <!-- APELLIDOS: Cristal zafiro ahumado profundo -->
+          <linearGradient id="liquid-body-family" x1="0%" y1="0%" x2="10%" y2="100%">
+            <stop offset="0%" stop-color="#8ab8ff" stop-opacity="0.26"/>
+            <stop offset="30%" stop-color="#4e82d9" stop-opacity="0.09"/>
+            <stop offset="70%" stop-color="#2c559e" stop-opacity="0.05"/>
+            <stop offset="100%" stop-color="#80b0ff" stop-opacity="0.20"/>
           </linearGradient>
 
-          <linearGradient id="glass-rim" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stop-color="#ffffff" stop-opacity="0.72"/>
-            <stop offset="45%" stop-color="#a8c7f5" stop-opacity="0.16"/>
-            <stop offset="55%" stop-color="#4e6a94" stop-opacity="0.12"/>
-            <stop offset="100%" stop-color="#d6e7ff" stop-opacity="0.52"/>
-          </linearGradient>
-
+          <!-- Filtro Liquid Glass: domo curvo, refracción continua sin cortes internos y cáustica suave -->
           <filter id="liquid-glass-filter" x="-8%" y="-12%" width="116%" height="124%" color-interpolation-filters="sRGB">
-            <feDropShadow dx="0" dy="10" stdDeviation="8" flood-color="#02050a" flood-opacity="0.65" result="outer-shadow"/>
-            <feGaussianBlur in="SourceAlpha" stdDeviation="2.6" result="glass-dome"/>
-            <feSpecularLighting in="glass-dome" surfaceScale="5.5" specularConstant="1.15" specularExponent="28" lighting-color="#f2f7ff" result="spec-top">
-              <fePointLight x="-150" y="-320" z="260"/>
+            <feDropShadow dx="0" dy="10" stdDeviation="7.5" flood-color="#010308" flood-opacity="0.72" result="outer-shadow"/>
+            <feGaussianBlur in="SourceAlpha" stdDeviation="2.8" result="glass-dome"/>
+            <feSpecularLighting in="glass-dome" surfaceScale="6.2" specularConstant="1.35" specularExponent="34" lighting-color="#ffffff" result="spec-top">
+              <fePointLight x="-160" y="-340" z="270"/>
             </feSpecularLighting>
             <feComposite in="spec-top" in2="SourceAlpha" operator="in" result="spec-top-clipped"/>
-            <feSpecularLighting in="glass-dome" surfaceScale="3.5" specularConstant="0.65" specularExponent="22" lighting-color="#9cc0f5" result="spec-bottom">
-              <fePointLight x="950" y="520" z="180"/>
+            <feSpecularLighting in="glass-dome" surfaceScale="4.2" specularConstant="0.82" specularExponent="26" lighting-color="#a8ccff" result="spec-bottom">
+              <fePointLight x="960" y="540" z="190"/>
             </feSpecularLighting>
             <feComposite in="spec-bottom" in2="SourceAlpha" operator="in" result="spec-bottom-clipped"/>
+            <feMorphology in="SourceAlpha" operator="erode" radius="1.4" result="inner-core"/>
+            <feComposite in="SourceAlpha" in2="inner-core" operator="out" result="unified-rim"/>
+            <feGaussianBlur in="unified-rim" stdDeviation="0.45" result="soft-rim"/>
+            <feFlood flood-color="#e3eeff" flood-opacity="0.46" result="rim-tint"/>
+            <feComposite in="rim-tint" in2="soft-rim" operator="in" result="glass-edge"/>
             <feOffset in="SourceAlpha" dx="0" dy="2.5" result="inner-offset"/>
-            <feGaussianBlur in="inner-offset" stdDeviation="2" result="inner-blur"/>
+            <feGaussianBlur in="inner-offset" stdDeviation="2.2" result="inner-blur"/>
             <feComposite in="SourceAlpha" in2="inner-blur" operator="out" result="inner-shadow-mask"/>
-            <feFlood flood-color="#040914" flood-opacity="0.55" result="dark-tint"/>
+            <feFlood flood-color="#030814" flood-opacity="0.52" result="dark-tint"/>
             <feComposite in="dark-tint" in2="inner-shadow-mask" operator="in" result="inner-depth"/>
             <feMerge>
               <feMergeNode in="outer-shadow"/>
@@ -78,13 +79,14 @@
               <feMergeNode in="inner-depth"/>
               <feMergeNode in="spec-top-clipped"/>
               <feMergeNode in="spec-bottom-clipped"/>
+              <feMergeNode in="glass-edge"/>
             </feMerge>
           </filter>
         </defs>
 
         <g font-family="Manrope, Helvetica Neue, Arial, sans-serif" font-size="116" font-weight="600" letter-spacing="2.3" filter="url(#liquid-glass-filter)">
-          <text class="name-given" x="3" y="112" fill="url(#glass-body-top)" stroke="url(#glass-rim)" stroke-width="1.35" paint-order="stroke fill">Miguel Ángel</text>
-          <text class="name-family" x="3" y="246" fill="url(#glass-body-bottom)" stroke="url(#glass-rim)" stroke-width="1.25" paint-order="stroke fill">Martínez Cárdenas</text>
+          <text class="name-given" x="3" y="112" fill="url(#liquid-body-given)">Miguel Ángel</text>
+          <text class="name-family" x="3" y="246" fill="url(#liquid-body-family)">Martínez Cárdenas</text>
         </g>
       </svg>
     </h1>
